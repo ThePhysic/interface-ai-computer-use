@@ -1,0 +1,1153 @@
+{
+  "schema_version": "1.0",
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "description": "Read a fictional member's current savings balance.",
+  "application": {
+    "family": "fictional-credit-union",
+    "version": "1.0",
+    "checkpoint": {
+      "kind": "visible",
+      "target": {
+        "frames": [],
+        "candidates": [
+          {
+            "kind": "text",
+            "text": {
+              "kind": "literal",
+              "value": "Fictional Credit Union — Staff Console v1.0"
+            }
+          }
+        ],
+        "expected_tag": null,
+        "expected_text": null,
+        "rationale": "Visible vendor/application version header"
+      }
+    }
+  },
+  "inputs": {
+    "member_id": {
+      "type": "string",
+      "format": "member_id",
+      "description": "Five-digit fictional member ID",
+      "enum": []
+    }
+  },
+  "outputs": {
+    "member_id": {
+      "type": "string",
+      "format": "member_id",
+      "description": "Member ID read from the active record",
+      "enum": [],
+      "binding": {
+        "kind": "extracted",
+        "name": "member_id"
+      },
+      "equals": {
+        "kind": "input",
+        "name": "member_id"
+      }
+    },
+    "balance_minor_units": {
+      "type": "integer",
+      "format": "plain",
+      "description": "Savings balance in USD cents",
+      "enum": [],
+      "binding": {
+        "kind": "extracted",
+        "name": "balance_minor_units"
+      },
+      "equals": null
+    },
+    "currency": {
+      "type": "string",
+      "format": "currency",
+      "description": "Currency read from the balance",
+      "enum": [
+        "USD"
+      ],
+      "binding": {
+        "kind": "extracted",
+        "name": "currency"
+      },
+      "equals": null
+    }
+  },
+  "steps": [
+    {
+      "id": "s001",
+      "action": {
+        "kind": "navigate",
+        "url": "/"
+      },
+      "preconditions": [],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [],
+            "candidates": [
+              {
+                "kind": "text",
+                "text": {
+                  "kind": "literal",
+                  "value": "Fictional Credit Union — Staff Console v1.0"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Visible vendor/application version header"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s002",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "link",
+              "name": {
+                "kind": "literal",
+                "value": "Find a member"
+              }
+            }
+          ],
+          "expected_tag": "a",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        }
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "link",
+                "name": {
+                  "kind": "literal",
+                  "value": "Find a member"
+                }
+              }
+            ],
+            "expected_tag": "a",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Member search"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s003",
+      "action": {
+        "kind": "fill",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "structural",
+              "tag": "input",
+              "name": "member_id",
+              "adjacent_label": null
+            }
+          ],
+          "expected_tag": "input",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        },
+        "value": {
+          "kind": "input",
+          "name": "member_id"
+        }
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "input",
+                "name": "member_id",
+                "adjacent_label": null
+              }
+            ],
+            "expected_tag": "input",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Member search"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "value_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "input",
+                "name": "member_id",
+                "adjacent_label": null
+              }
+            ],
+            "expected_tag": "input",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s004",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "button",
+              "name": {
+                "kind": "literal",
+                "value": "Search"
+              }
+            }
+          ],
+          "expected_tag": "button",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        }
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "button",
+                "name": {
+                  "kind": "literal",
+                  "value": "Search"
+                }
+              }
+            ],
+            "expected_tag": "button",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Member search"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s005",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "row",
+              "row_text": {
+                "kind": "input",
+                "name": "member_id"
+              },
+              "role": "link",
+              "name": {
+                "kind": "literal",
+                "value": "Open member"
+              }
+            }
+          ],
+          "expected_tag": "a",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        }
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "row",
+                "row_text": {
+                  "kind": "input",
+                  "name": "member_id"
+                },
+                "role": "link",
+                "name": {
+                  "kind": "literal",
+                  "value": "Open member"
+                }
+              }
+            ],
+            "expected_tag": "a",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Member record"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s006",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "link",
+              "name": {
+                "kind": "literal",
+                "value": "View savings"
+              }
+            }
+          ],
+          "expected_tag": "a",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        }
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "link",
+                "name": {
+                  "kind": "literal",
+                  "value": "View savings"
+                }
+              }
+            ],
+            "expected_tag": "a",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Savings view reached"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Account type"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "literal",
+            "value": "Savings"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s007",
+      "action": {
+        "kind": "extract",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "structural",
+              "tag": "td",
+              "name": null,
+              "adjacent_label": {
+                "kind": "literal",
+                "value": "Current balance"
+              }
+            }
+          ],
+          "expected_tag": "td",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        },
+        "name": "balance_minor_units",
+        "parser": "usd_minor_units"
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Current balance"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Savings view reached"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Account type"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "literal",
+            "value": "Savings"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s008",
+      "action": {
+        "kind": "extract",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "structural",
+              "tag": "td",
+              "name": null,
+              "adjacent_label": {
+                "kind": "literal",
+                "value": "Member ID"
+              }
+            }
+          ],
+          "expected_tag": "td",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        },
+        "name": "member_id",
+        "parser": "text"
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Savings view reached"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Account type"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "literal",
+            "value": "Savings"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    },
+    {
+      "id": "s009",
+      "action": {
+        "kind": "extract",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "structural",
+              "tag": "td",
+              "name": null,
+              "adjacent_label": {
+                "kind": "literal",
+                "value": "Current balance"
+              }
+            }
+          ],
+          "expected_tag": "td",
+          "expected_text": null,
+          "rationale": "Grounded from the observation to the same unique visible live control."
+        },
+        "name": "currency",
+        "parser": "usd_currency"
+      },
+      "preconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Current balance"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Grounded from the observation to the same unique visible live control."
+          }
+        }
+      ],
+      "postconditions": [
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Observed page heading after action"
+          }
+        },
+        {
+          "kind": "visible",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "role",
+                "role": "heading",
+                "name": {
+                  "kind": "literal",
+                  "value": "Savings account"
+                }
+              }
+            ],
+            "expected_tag": null,
+            "expected_text": null,
+            "rationale": "Savings view reached"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Member ID"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "input",
+            "name": "member_id"
+          }
+        },
+        {
+          "kind": "text_equals",
+          "target": {
+            "frames": [
+              "workspace"
+            ],
+            "candidates": [
+              {
+                "kind": "structural",
+                "tag": "td",
+                "name": null,
+                "adjacent_label": {
+                  "kind": "literal",
+                  "value": "Account type"
+                }
+              }
+            ],
+            "expected_tag": "td",
+            "expected_text": null,
+            "rationale": "Value cell adjacent to its visible caption"
+          },
+          "value": {
+            "kind": "literal",
+            "value": "Savings"
+          }
+        }
+      ],
+      "timeout_seconds": 5.0
+    }
+  ],
+  "success_conditions": [
+    {
+      "kind": "visible",
+      "target": {
+        "frames": [
+          "workspace"
+        ],
+        "candidates": [
+          {
+            "kind": "role",
+            "role": "heading",
+            "name": {
+              "kind": "literal",
+              "value": "Savings account"
+            }
+          }
+        ],
+        "expected_tag": null,
+        "expected_text": null,
+        "rationale": "Savings view reached"
+      }
+    },
+    {
+      "kind": "text_equals",
+      "target": {
+        "frames": [
+          "workspace"
+        ],
+        "candidates": [
+          {
+            "kind": "structural",
+            "tag": "td",
+            "name": null,
+            "adjacent_label": {
+              "kind": "literal",
+              "value": "Member ID"
+            }
+          }
+        ],
+        "expected_tag": "td",
+        "expected_text": null,
+        "rationale": "Value cell adjacent to its visible caption"
+      },
+      "value": {
+        "kind": "input",
+        "name": "member_id"
+      }
+    },
+    {
+      "kind": "text_equals",
+      "target": {
+        "frames": [
+          "workspace"
+        ],
+        "candidates": [
+          {
+            "kind": "structural",
+            "tag": "td",
+            "name": null,
+            "adjacent_label": {
+              "kind": "literal",
+              "value": "Account type"
+            }
+          }
+        ],
+        "expected_tag": "td",
+        "expected_text": null,
+        "rationale": "Value cell adjacent to its visible caption"
+      },
+      "value": {
+        "kind": "literal",
+        "value": "Savings"
+      }
+    }
+  ],
+  "business_outcomes": [
+    {
+      "code": "MEMBER_NOT_FOUND",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "text",
+              "text": {
+                "kind": "literal",
+                "value": "No such member."
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Known no-record message"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "run_id": "58835bd89e854f5a825075b8e58b89ae",
+    "evidence_file": "evidence\\phase2\\discovery\\58835bd89e854f5a825075b8e58b89ae\\events.jsonl",
+    "source": "live_llm",
+    "model": "gpt-5-mini-2025-08-07",
+    "response_ids": [
+      "resp_04cd8eb525ccec85016ad6887071a887d0b043a659f627fded",
+      "resp_02605b26f4b36b58016ad68875661487d0b33cc239d60b1d8d",
+      "resp_063f69f451353c82016ad6887a465487d0860b9ce126cf08f0",
+      "resp_0b0a8f7aed27b0a3016ad6887eb24887d0acf99dc3b4e55b91",
+      "resp_08c435854d89d14c016ad6888393d887d09fc49015aed4d2f1",
+      "resp_04cf2ef7ea9d498b016ad68888ff7087d082945046f2548e28",
+      "resp_05c3735958341a9d016ad688902bf087d0b2c8484dba1d06f5",
+      "resp_0558699b24d924ad016ad688960be487d0a5fec70ca365010b"
+    ],
+    "human_assisted": false
+  }
+}

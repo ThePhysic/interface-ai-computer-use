@@ -1,0 +1,3 @@
+# Historical evidence and hashes must survive checkout without newline conversion.
+evidence/** -text
+*.png binary

@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+*.egg-info/
+.env
+.env.*
+!.env.example
+.runs/
+build/
+dist/
+_context/
+.private/
+/*.zip
+# Local engineering instructions and machine-specific historical review metadata.
+/AGENTS.md
+/evidence/phase[1-4]/**/README.md
+/evidence/phase[1-4]/**/verification.json
+/evidence/phase[1-4]/**/tests.xml
+/evidence/phase3/runs.json

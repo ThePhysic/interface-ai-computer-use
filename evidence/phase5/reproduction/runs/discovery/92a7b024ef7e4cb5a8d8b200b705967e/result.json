@@ -1,0 +1,14 @@
+{
+  "status": "failure",
+  "code": "COMMAND_FAILED",
+  "step_id": null,
+  "expected": "Verified capability execution",
+  "observed": "COMMAND_FAILED",
+  "evidence_ref": ".runs/discovery/92a7b024ef7e4cb5a8d8b200b705967e/events.jsonl#event-3",
+  "completion_uncertain": false,
+  "capability_id": null,
+  "capability_version": null,
+  "category": "runtime",
+  "recovery_attempts": [],
+  "human_intervention_appropriate": false
+}

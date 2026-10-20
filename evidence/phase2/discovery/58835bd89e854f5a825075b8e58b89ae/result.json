@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "outputs": {
+    "member_id": "12345",
+    "balance_minor_units": 123456,
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "failure",
+  "code": "ORIGIN_DENIED",
+  "step_id": "s001",
+  "expected": "visible: Fictional Credit Union \u2014 Staff Console v1.0",
+  "observed": "{\"step_id\": \"s001\", \"checkpoint\": \"visible: Fictional Credit Union \u2014 Staff Console v1.0\", \"condition_code\": \"ORIGIN_DENIED\", \"session_id\": \"2c7a217a1fb440bbac5df1f47cebc258\", \"page_id\": \"94c7c6090b374aecb85183b9980ab230\", \"url\": \"about:blank\", \"native_dialog_type\": null, \"blocked_request_code\": null, \"screenshot_unavailable\": \"PolicyViolation\"}",
+  "evidence_ref": "evidence/phase4/manual-success/2c515fb7c5b94f6db28d28f84135fefd/events.jsonl#event-7",
+  "completion_uncertain": true,
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "category": "policy",
+  "recovery_attempts": [],
+  "human_intervention_appropriate": false
+}

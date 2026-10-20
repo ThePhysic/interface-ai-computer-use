@@ -1,0 +1,14 @@
+{
+  "status": "failure",
+  "code": "SESSION_EXPIRED",
+  "step_id": "s005",
+  "expected": "visible: Member record; text_equals: Member ID equals input.member_id",
+  "observed": "{\"step_id\": \"s005\", \"checkpoint\": \"visible: Member record; text_equals: Member ID equals input.member_id\", \"condition_code\": \"SESSION_EXPIRED\", \"session_id\": \"6edc630ec1644284acaf92c53c3a8e71\", \"page_id\": \"41fe02f9c6c1432cbbd0e4eff2106f98\", \"url\": \"http://127.0.0.1:55116/\", \"native_dialog_type\": null, \"blocked_request_code\": null, \"headings\": [\"Session expired\"], \"readable_captions\": [], \"screenshot_ref\": \"evidence/phase3/session_expired/9fa16af257c6483899c9e0de6916289a/b558cc95c8a0756eb6c956bcf7bedc42bbe6c10daaf86fe1bf25e2779c88b575.png\"}",
+  "evidence_ref": "evidence/phase3/session_expired/9fa16af257c6483899c9e0de6916289a/events.jsonl#event-20",
+  "completion_uncertain": false,
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "category": "session",
+  "recovery_attempts": [],
+  "human_intervention_appropriate": true
+}

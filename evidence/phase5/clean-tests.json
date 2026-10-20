@@ -1,0 +1,923 @@
+{
+  "source": "automated_test",
+  "environment": "clean_project_new_venv_new_browser",
+  "command": ".\\.venv\\Scripts\\python.exe -m pytest -q --junitxml=.runs/phase5-clean-tests.xml",
+  "tests": 181,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "console_duration_seconds": 582.45,
+  "junit_duration_seconds": 582.289,
+  "cases": [
+    {
+      "module": "tests.test_browser",
+      "name": "test_real_iframe_flow_and_typed_checkpoint",
+      "seconds": 4.203
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_screenshot_point_grounded_without_coordinate_click",
+      "seconds": 1.659
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_masked_inputs_do_not_enter_observation",
+      "seconds": 1.894
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_ambiguous_primary_does_not_fall_back",
+      "seconds": 0.99
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_fallback_only_when_absent_and_identity_checked",
+      "seconds": 1.227
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_financial_mutation_blocked[click]",
+      "seconds": 1.726
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_financial_mutation_blocked[press]",
+      "seconds": 2.196
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_financial_mutation_blocked[navigate]",
+      "seconds": 2.735
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_network_guard_blocks_manual_form_submission",
+      "seconds": 2.647
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_manual_activity_same_session_redacted_and_automation_stopped",
+      "seconds": 1.487
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_ownership_transfer_waits_for_execution_boundary",
+      "seconds": 0.886
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_conflicting_candidates_fail",
+      "seconds": 1.123
+    },
+    {
+      "module": "tests.test_browser",
+      "name": "test_adapter_rejects_effect_changed_after_policy_inspection",
+      "seconds": 1.125
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_strict_schema_round_trip",
+      "seconds": 0.003
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[version]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[missing_version]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[code]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[unknown_input]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[forward_extraction]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[duplicate_step]",
+      "seconds": 0.003
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[parser]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[absolute_route]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_malformed_artifacts_rejected[ephemeral_id]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_extracted_binding_can_feed_later_action",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_input_types_are_strict_and_leading_zero_survives",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_exact_money_parser[USD 1,234.56-123456]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_exact_money_parser[USD 9876.54-987654]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_exact_money_parser[USD 0.01-1]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[USD 1,23.45]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[USD 1.2]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[$1.23]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[EUR 1.23]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[USD NaN]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_capability",
+      "name": "test_money_parser_rejects_ambiguous_or_unsupported_formats[USD -1.23]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_contracts",
+      "name": "test_bindings_keep_provenance_and_leading_zero",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_contracts",
+      "name": "test_action_round_trip_and_reject_code",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_contracts",
+      "name": "test_three_terminal_results_exclude_pause",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_contracts",
+      "name": "test_ownership_generation_and_no_unvalidated_resume",
+      "seconds": 0.011
+    },
+    {
+      "module": "tests.test_demo_app",
+      "name": "test_search_detail_savings_and_errors",
+      "seconds": 0.028
+    },
+    {
+      "module": "tests.test_evidence",
+      "name": "test_secret_and_input_redaction",
+      "seconds": 0.02
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_executor_uses_only_public_adapter_contract",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_fill_binds_value_without_raw_locator",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_policy_checks_inspected_effect_before_primitive",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_navigation_checks_child_frame_state",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_human_ownership_blocks_before_adapter_calls",
+      "seconds": 0.01
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_adapter_errors_preserve_completion_uncertainty[False]",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_execution",
+      "name": "test_adapter_errors_preserve_completion_uncertainty[True]",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_transition_generation_and_queued_action_cannot_adopt_new_owner",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_operator_wait_pauses_automation_budget_and_keeps_event_loop_live",
+      "seconds": 0.086
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_pause_waits_for_inflight_guarded_action_to_settle",
+      "seconds": 0.009
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_capture_rejects_activity_from_another_page",
+      "seconds": 0.038
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_operator_ack_cannot_bypass_automation_or_financial_policy[GET-/members/06789?operator_ack=confirmed]",
+      "seconds": 0.002
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_operator_ack_cannot_bypass_automation_or_financial_policy[POST-/members/06789?operator_ack=confirmed]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_operator_ack_cannot_bypass_automation_or_financial_policy[GET-/transfer?operator_ack=confirmed]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_same_session_replay_resumes_correct_step_with_capture",
+      "seconds": 10.791
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[cancel-INTERVENTION_CANCELLED-cancelled]",
+      "seconds": 7.815
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[unresolved-INTERVENTION_UNRESOLVED-unresolved]",
+      "seconds": 6.904
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[still_blocked-RESUME_BLOCKER_UNRESOLVED-rejected]",
+      "seconds": 9.352
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[wrong_member-RESUME_IDENTITY_MISMATCH-rejected]",
+      "seconds": 6.35
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[wrong_view-RESUME_CHECKPOINT_FAILED-rejected]",
+      "seconds": 6.376
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[stale-STALE_INTERVENTION-rejected]",
+      "seconds": 6.3
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[timeout-INTERVENTION_TIMEOUT-timed_out]",
+      "seconds": 5.899
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[closed-SESSION_CLOSED-failed]",
+      "seconds": 5.469
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[replaced-SESSION_IDENTITY_CHANGED-failed]",
+      "seconds": 5.326
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_rejected_interventions_fail_safely[policy-ROUTE_DENIED-failed]",
+      "seconds": 5.107
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_uncertain_action_is_not_reexecuted_after_human_resolution[True]",
+      "seconds": 10.676
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_uncertain_action_is_not_reexecuted_after_human_resolution[False]",
+      "seconds": 6.203
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_partial_extractions_and_recovery_history_survive_handoff",
+      "seconds": 15.694
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_discovery_handoff_is_assisted_and_cannot_compile",
+      "seconds": 13.869
+    },
+    {
+      "module": "tests.test_handoff",
+      "name": "test_console_eof_is_unresolved_and_does_not_hang",
+      "seconds": 0.005
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_read_routes_allowed[/]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_read_routes_allowed[/home]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_read_routes_allowed[/members?member_id=06789]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_read_routes_allowed[/members/06789/savings]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[http://127.0.0.1:5055/transfer-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[http://127.0.0.1:5055/members-POST]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[http://127.0.0.1:5056/members-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[https://example.com/-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[http://user:password@127.0.0.1:5055/members-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[http://127.0.0.1:5055/members/%2e%2e/home-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_default_denial[javascript:alert(1)-GET]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_resolved_financial_form_denied_for_every_interaction[click]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_resolved_financial_form_denied_for_every_interaction[press]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_resolved_financial_form_denied_for_every_interaction[fill]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_policy",
+      "name": "test_configurable_action_allowlist",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/-Find a member-click-True-control_id]",
+      "seconds": 2.018
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/-Find a member-click-True-coordinates]",
+      "seconds": 2.051
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/-Staff home-click-False-control_id]",
+      "seconds": 1.975
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/-Staff home-click-False-coordinates]",
+      "seconds": 1.896
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/members-[input]-fill-True-control_id]",
+      "seconds": 1.849
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/members-[input]-fill-True-coordinates]",
+      "seconds": 1.805
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/members-Search-click-False-control_id]",
+      "seconds": 1.911
+    },
+    {
+      "module": "tests.test_probe",
+      "name": "test_probe_requires_explicit_checkpoint[/members-Search-click-False-coordinates]",
+      "seconds": 1.95
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[version]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[callback]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[attempts]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[total]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[interval]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[timeout]",
+      "seconds": 0.003
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[action_shape]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[duplicate_code]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[extracted_reference]",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_runtime_profile_rejects_unsupported_or_unbounded_rules[input_reference]",
+      "seconds": 0.003
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_profile_round_trip_and_original_capability_integrity",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[validation-/members?member_id=06789-Member lookup rejected-200]",
+      "seconds": 0.014
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[member_not_found-/members?member_id=06789-No such member-200]",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[account_not_found-/members/06789/savings-Savings account not found-404]",
+      "seconds": 0.013
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[permission_denied-/members/06789-Access denied-403]",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[session_expired-/members/06789-Session expired-401]",
+      "seconds": 0.013
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_server_scenarios_are_visible_application_responses[persistent_error-/members/06789/savings-Application error-500]",
+      "seconds": 0.013
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[validation-business_outcome-VALIDATION_REJECTED-0]",
+      "seconds": 5.803
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[member_not_found-business_outcome-MEMBER_NOT_FOUND-0]",
+      "seconds": 7.128
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[account_not_found-business_outcome-ACCOUNT_NOT_FOUND-0]",
+      "seconds": 8.761
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[permission_denied-business_outcome-PERMISSION_DENIED-0]",
+      "seconds": 7.621
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[known_interstitial-success-None-1]",
+      "seconds": 14.875
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[slow_loading-success-None-None]",
+      "seconds": 15.287
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[transient_failure-success-None-1]",
+      "seconds": 14.666
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[loading_exhausted-failure-RECOVERY_EXHAUSTED-3]",
+      "seconds": 11.648
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[retry_exhausted-failure-RECOVERY_EXHAUSTED-2]",
+      "seconds": 12.505
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[persistent_error-failure-APPLICATION_ERROR_PERSISTENT-0]",
+      "seconds": 8.709
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[session_expired-failure-SESSION_EXPIRED-0]",
+      "seconds": 7.174
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[unknown_interstitial-failure-UNEXPECTED_INTERSTITIAL-0]",
+      "seconds": 8.686
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_complete_runtime_matrix[native_dialog-failure-UNEXPECTED_NATIVE_DIALOG-0]",
+      "seconds": 8.129
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_uncertain_completion_requires_new_checkpoint_and_never_retries[True-False]",
+      "seconds": 11.599
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_uncertain_completion_requires_new_checkpoint_and_never_retries[False-False]",
+      "seconds": 8.889
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_uncertain_completion_requires_new_checkpoint_and_never_retries[True-True]",
+      "seconds": 6.031
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_policy_blocks_unexpected_redirect_without_recovery",
+      "seconds": 7.716
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_recovery_cannot_resubmit_get_form",
+      "seconds": 2.726
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_policy_alternative_mutation_paths[direct]",
+      "seconds": 0.92
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_policy_alternative_mutation_paths[button]",
+      "seconds": 0.954
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_policy_alternative_mutation_paths[enter]",
+      "seconds": 0.938
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_policy_alternative_mutation_paths[form_submit]",
+      "seconds": 0.93
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_profile_mismatch_and_version_fail_before_actions",
+      "seconds": 1.301
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_output_errors_have_specific_codes[parse-OUTPUT_PARSE_ERROR]",
+      "seconds": 7.912
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_output_errors_have_specific_codes[identity-OUTPUT_IDENTITY_MISMATCH]",
+      "seconds": 11.539
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_output_errors_have_specific_codes[type-OUTPUT_TYPE_MISMATCH]",
+      "seconds": 14.775
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_failure_diagnostics_mask_inputs_and_explain_ambiguity",
+      "seconds": 2.472
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_global_recovery_budget_is_independent_of_rule_budget",
+      "seconds": 11.044
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_ownership_transfer_during_wait_stops_recovery",
+      "seconds": 9.414
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_timeout_during_recovery_keeps_attempt_and_commit_uncertainty",
+      "seconds": 2.216
+    },
+    {
+      "module": "tests.test_runtime",
+      "name": "test_timeout_during_uncertain_reinspection_preserves_uncertainty",
+      "seconds": 3.253
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_nonfinite_or_invalid_deadline_cannot_reach_surface[inf]",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_nonfinite_or_invalid_deadline_cannot_reach_surface[nan]",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_nonfinite_or_invalid_deadline_cannot_reach_surface[-inf]",
+      "seconds": 0.013
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_nonfinite_or_invalid_deadline_cannot_reach_surface[True]",
+      "seconds": 0.012
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_nonfinite_or_invalid_deadline_cannot_reach_surface[0]",
+      "seconds": 0.011
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_discovery_step_budget_is_a_bounded_integer[True]",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_discovery_step_budget_is_a_bounded_integer[1.5]",
+      "seconds": 0.007
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_discovery_step_budget_is_a_bounded_integer[0]",
+      "seconds": 0.006
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_discovery_step_budget_is_a_bounded_integer[40]",
+      "seconds": 0.006
+    },
+    {
+      "module": "tests.test_submission",
+      "name": "test_cli_reads_windows_utf8_bom_inputs_and_profile",
+      "seconds": 13.288
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_provider_receives_screenshot_and_no_hidden_workflow",
+      "seconds": 0.004
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_missing_key_fails_without_network",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_invalid_selection_shapes_rejected[control_id-None-None-None]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_invalid_selection_shapes_rejected[control_id-c1-20-30]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_invalid_selection_shapes_rejected[coordinates-c1-20-30]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_invalid_selection_shapes_rejected[coordinates-None-None-30]",
+      "seconds": 0.001
+    },
+    {
+      "module": "tests.test_vision",
+      "name": "test_discovery_prompt_contains_observations_and_executed_history_only",
+      "seconds": 0.003
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_valid_control_id_executes_in_original_frame",
+      "seconds": 1.772
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_unknown_id_never_falls_back_to_a_control",
+      "seconds": 1.579
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_new_observation_invalidates_prior_id_scope",
+      "seconds": 1.374
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_changed_screenshot_invalidates_selection",
+      "seconds": 1.386
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_same_pixels_after_navigation_are_still_stale",
+      "seconds": 1.241
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_identical_node_replacement_is_not_the_observed_control",
+      "seconds": 1.331
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_hidden_link_effect_change_is_rejected",
+      "seconds": 1.331
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_control_id_does_not_bypass_ambiguous_locator",
+      "seconds": 1.466
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_control_id_cannot_bypass_financial_policy",
+      "seconds": 2.32
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_coordinate_fallback_hits_an_unlisted_control_exactly",
+      "seconds": 3.455
+    },
+    {
+      "module": "tests.test_visual_selection",
+      "name": "test_coordinate_whitespace_does_not_guess_nearest_control",
+      "seconds": 1.323
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_revisited_entrypoint_preserves_observation_scope",
+      "seconds": 1.435
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_fresh_parameterized_replay_without_provider",
+      "seconds": 18.884
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_cli_replay_is_offline_in_fresh_process",
+      "seconds": 19.844
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_known_not_found_is_business_outcome",
+      "seconds": 14.185
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_wrong_record_fails_identity_checkpoint",
+      "seconds": 16.856
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_replay_bad_inputs_and_artifacts_fail_before_navigation",
+      "seconds": 13.622
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_model_done_cannot_establish_success",
+      "seconds": 1.601
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_discovery_step_limit_and_timeout",
+      "seconds": 3.822
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_human_assisted_trace_not_compiled",
+      "seconds": 14.3
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_compiler_rejects_literal_identifiers_and_weak_targets",
+      "seconds": 13.525
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_ambiguous_replay_target_fails",
+      "seconds": 13.68
+    },
+    {
+      "module": "tests.test_workflow",
+      "name": "test_timeout_preserves_uncertain_commit_without_retry",
+      "seconds": 17.546
+    }
+  ],
+  "raw_junit_location": "private_local_only",
+  "metadata_omitted": [
+    "hostname",
+    "absolute_local_paths"
+  ]
+}

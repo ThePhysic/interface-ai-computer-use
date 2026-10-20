@@ -1,0 +1,31 @@
+{
+  "status": "failure",
+  "code": "RECOVERY_EXHAUSTED",
+  "step_id": "s006",
+  "expected": "visible: Savings account; visible: Savings account; text_equals: Member ID equals input.member_id; text_equals: Account type equals Savings",
+  "observed": "{\"step_id\": \"s006\", \"checkpoint\": \"visible: Savings account; visible: Savings account; text_equals: Member ID equals input.member_id; text_equals: Account type equals Savings\", \"condition_code\": \"RECOVERY_EXHAUSTED\", \"session_id\": \"0fa4dfc6461643b4809cdc722080e5bd\", \"page_id\": \"6fb30622d94e42eca3227fd77016b019\", \"url\": \"http://127.0.0.1:55309/\", \"native_dialog_type\": null, \"blocked_request_code\": null, \"headings\": [\"Temporary service failure\"], \"readable_captions\": [], \"screenshot_ref\": \"evidence/phase3/retry_exhausted/da13f52ee3794e53ab916c0bd1b7916a/19d335f82b2f051a068f0d71a07f86c4b2f95efb5865e3efa912b2b02ff875a0.png\"}",
+  "evidence_ref": "evidence/phase3/retry_exhausted/da13f52ee3794e53ab916c0bd1b7916a/events.jsonl#event-37",
+  "completion_uncertain": false,
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "category": "runtime",
+  "recovery_attempts": [
+    {
+      "condition_code": "TRANSIENT_APPLICATION_ERROR",
+      "strategy": "retry_read",
+      "attempt": 1,
+      "result": "still_present",
+      "evidence_ref": "evidence/phase3/retry_exhausted/da13f52ee3794e53ab916c0bd1b7916a/events.jsonl#event-25",
+      "completion_uncertain": false
+    },
+    {
+      "condition_code": "TRANSIENT_APPLICATION_ERROR",
+      "strategy": "retry_read",
+      "attempt": 2,
+      "result": "still_present",
+      "evidence_ref": "evidence/phase3/retry_exhausted/da13f52ee3794e53ab916c0bd1b7916a/events.jsonl#event-32",
+      "completion_uncertain": false
+    }
+  ],
+  "human_intervention_appropriate": true
+}

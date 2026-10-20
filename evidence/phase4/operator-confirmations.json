@@ -1,0 +1,20 @@
+{
+  "source": "actual_user_responses_in_IDE_conversation",
+  "success": {
+    "run_id": "3edd60f0fa29496687b2a713d4e5f8f2",
+    "intervention_id": "8d86d081525e4db3ade18233133dcc0f",
+    "requested_manual_activity": "Check the read-only acknowledgement, submit it in the existing headed browser, and stop on Member record for fictional member 06789.",
+    "user_response": "Done",
+    "forwarded_cli_command": "resume",
+    "human_UI_activity_automated_by_agent": false,
+    "CLI_command_forwarded_by_agent_after_user_response": true
+  },
+  "cancellation": {
+    "run_id": "7a6b3c13366a41c08d7af39414a3eb8c",
+    "intervention_id": "bb99075fa20c4e8fa01921f3433e13a0",
+    "user_response": "Cancel intervention",
+    "forwarded_cli_command": "cancel",
+    "browser_gestures_required": false,
+    "CLI_command_forwarded_by_agent_after_user_response": true
+  }
+}

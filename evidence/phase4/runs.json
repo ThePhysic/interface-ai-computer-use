@@ -1,0 +1,37 @@
+{
+  "server_command": ".\\.venv\\Scripts\\python.exe -m interface_cu.cli serve --port 5064 --scenario operator_challenge",
+  "server_stopped_after_runs": true,
+  "artifact": "evidence/phase2/savings.capability.json",
+  "artifact_sha256": "e965f3f08a4ec5c139c507446752c213f29886e4504f90f8b1eb7dadab331cb3",
+  "model_calls": 0,
+  "runs": [
+    {
+      "run_id": "3edd60f0fa29496687b2a713d4e5f8f2",
+      "command": ".\\.venv\\Scripts\\python.exe -m interface_cu.cli replay --origin http://127.0.0.1:5064 --artifact evidence/phase2/savings.capability.json --runtime-profile evidence/phase3/savings.runtime.json --member-id 06789 --handoff --headed --operator-timeout 600 --evidence evidence/phase4/manual-success",
+      "evidence": "evidence/phase4/manual-success/3edd60f0fa29496687b2a713d4e5f8f2",
+      "exit_code": 0,
+      "status": "success",
+      "operator_response": "resume",
+      "real_manual_UI_activity": true,
+      "scripted_UI_activity": false
+    },
+    {
+      "run_id": "7a6b3c13366a41c08d7af39414a3eb8c",
+      "command": ".\\.venv\\Scripts\\python.exe -m interface_cu.cli replay --origin http://127.0.0.1:5064 --artifact evidence/phase2/savings.capability.json --runtime-profile evidence/phase3/savings.runtime.json --member-id 06789 --handoff --headed --operator-timeout 600 --evidence evidence/phase4/manual-cancel",
+      "evidence": "evidence/phase4/manual-cancel/7a6b3c13366a41c08d7af39414a3eb8c",
+      "exit_code": 1,
+      "status": "failure",
+      "code": "INTERVENTION_CANCELLED",
+      "operator_response": "cancel",
+      "real_operator_cancellation": true,
+      "UI_activity_required": false
+    }
+  ],
+  "preliminary_entry_failures": [
+    "evidence/phase4/manual-success/3e008b49b2aa4799aa76a43c5596df24",
+    "evidence/phase4/manual-success/d312427906fb40258a38d5fd4726baf2",
+    "evidence/phase4/manual-success/2c515fb7c5b94f6db28d28f84135fefd",
+    "evidence/phase4/launch-diagnostics/bd3f594db92b444fb4acf0ada5ff60f0"
+  ],
+  "preliminary_failure_diagnosis": "The single-threaded Flask server could be occupied by a headed Chromium idle connection, starving Route.fetch. Ordinary Flask request threading fixed it. All four failures occurred before an intervention request."
+}

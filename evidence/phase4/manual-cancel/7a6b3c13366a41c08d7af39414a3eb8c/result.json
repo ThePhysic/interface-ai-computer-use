@@ -1,0 +1,14 @@
+{
+  "status": "failure",
+  "code": "INTERVENTION_CANCELLED",
+  "step_id": "s005",
+  "expected": "visible: Member record; text_equals: Member ID equals input.member_id",
+  "observed": "{\"step_id\": \"s005\", \"checkpoint\": \"visible: Member record; text_equals: Member ID equals input.member_id\", \"condition_code\": \"INTERVENTION_CANCELLED\", \"session_id\": \"b33b6b98f97243c9a0b50668be235948\", \"page_id\": \"49635349eec641ba8e2810fd8a1edba5\", \"url\": \"http://127.0.0.1:5064/\", \"native_dialog_type\": null, \"blocked_request_code\": null, \"headings\": [\"Operator acknowledgement required\"], \"readable_captions\": [\"Member ID\"], \"screenshot_ref\": \"evidence/phase4/manual-cancel/7a6b3c13366a41c08d7af39414a3eb8c/4a777d85238ab6ddb9ad640a8ae5879adc6b406c88084abfa9120419f1f43482.png\"}",
+  "evidence_ref": "evidence/phase4/manual-cancel/7a6b3c13366a41c08d7af39414a3eb8c/events.jsonl#event-30",
+  "completion_uncertain": false,
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "category": "runtime",
+  "recovery_attempts": [],
+  "human_intervention_appropriate": false
+}

@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0",
+  "capability_id": "banking.savings_balance",
+  "capability_version": "1.0.0",
+  "application_family": "fictional-credit-union",
+  "application_version": "1.0",
+  "business_outcomes": [
+    {
+      "code": "VALIDATION_REJECTED",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "text",
+              "text": {
+                "kind": "literal",
+                "value": "Member lookup rejected by validation rules."
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      }
+    },
+    {
+      "code": "VALIDATION_REJECTED_FORMAT",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "text",
+              "text": {
+                "kind": "literal",
+                "value": "Enter a five-digit fictional member ID."
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      }
+    },
+    {
+      "code": "MEMBER_NOT_FOUND",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Member not found"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      }
+    },
+    {
+      "code": "ACCOUNT_NOT_FOUND",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Savings account not found"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      }
+    },
+    {
+      "code": "PERMISSION_DENIED",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Access denied for member records"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      }
+    }
+  ],
+  "stop_rules": [
+    {
+      "code": "SESSION_EXPIRED",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Session expired"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "category": "session",
+      "human_intervention_appropriate": true
+    },
+    {
+      "code": "UNEXPECTED_INTERSTITIAL",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Confirm operation"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "category": "runtime",
+      "human_intervention_appropriate": true
+    },
+    {
+      "code": "APPLICATION_ERROR_PERSISTENT",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Application error"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "category": "application",
+      "human_intervention_appropriate": true
+    }
+  ],
+  "recovery_rules": [
+    {
+      "code": "SLOW_LOADING",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Loading savings"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "strategy": "wait",
+      "action": null,
+      "max_attempts": 3,
+      "interval_seconds": 0.25,
+      "timeout_seconds": 3.0
+    },
+    {
+      "code": "HARMLESS_INTERSTITIAL",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Read-only notice"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "strategy": "dismiss",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "link",
+              "name": {
+                "kind": "literal",
+                "value": "Continue to savings"
+              }
+            }
+          ],
+          "expected_tag": "a",
+          "expected_text": {
+            "kind": "literal",
+            "value": "Continue to savings"
+          },
+          "rationale": "Known harmless read-only recovery link"
+        }
+      },
+      "max_attempts": 1,
+      "interval_seconds": 0.3,
+      "timeout_seconds": 3.0
+    },
+    {
+      "code": "TRANSIENT_APPLICATION_ERROR",
+      "condition": {
+        "kind": "visible",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "heading",
+              "name": {
+                "kind": "literal",
+                "value": "Temporary service failure"
+              }
+            }
+          ],
+          "expected_tag": null,
+          "expected_text": null,
+          "rationale": "Reviewed visible runtime message"
+        }
+      },
+      "strategy": "retry_read",
+      "action": {
+        "kind": "click",
+        "target": {
+          "frames": [
+            "workspace"
+          ],
+          "candidates": [
+            {
+              "kind": "role",
+              "role": "link",
+              "name": {
+                "kind": "literal",
+                "value": "Retry read"
+              }
+            }
+          ],
+          "expected_tag": "a",
+          "expected_text": {
+            "kind": "literal",
+            "value": "Retry read"
+          },
+          "rationale": "Known harmless read-only recovery link"
+        }
+      },
+      "max_attempts": 2,
+      "interval_seconds": 0.3,
+      "timeout_seconds": 3.0
+    }
+  ],
+  "max_total_attempts": 6,
+  "uncertain_checks": 2,
+  "uncertain_interval_seconds": 0.15
+}

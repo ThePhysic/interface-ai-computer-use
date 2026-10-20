@@ -1,0 +1,168 @@
+{
+  "phase": 5,
+  "requirements_audit": "REQUIREMENTS.md",
+  "new_paid_model_calls": 0,
+  "workspace_regression": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_duration_seconds": 577.87,
+    "preserved_phase4_cases": 171,
+    "new_submission_cases": 10
+  },
+  "clean_regression": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_duration_seconds": 582.45
+  },
+  "identical_test_identities": true,
+  "unchanged_historical_evidence_files": 133,
+  "unchanged_previous_test_source_files": 14,
+  "artifact_sha256": "e965f3f08a4ec5c139c507446752c213f29886e4504f90f8b1eb7dadab331cb3",
+  "original_capability_and_profile_unchanged": true,
+  "documented_commands_exact_matches": 5,
+  "clean_setup": "evidence/phase5/setup.json",
+  "actual_commands": "evidence/phase5/commands.json",
+  "all_launched_demo_servers_stopped": true,
+  "report": {
+    "exact_headings": [
+      "Architecture",
+      "Artifact schema",
+      "Determinism & error handling",
+      "Heterogeneity & multi-tenant",
+      "Escalation & handoff",
+      "Safety",
+      "Cuts"
+    ],
+    "words": 1045,
+    "approximate_pages": "1-3; rendering dependent"
+  },
+  "files_changed": [
+    {
+      "file": ".gitattributes",
+      "change": "created"
+    },
+    {
+      "file": ".gitignore",
+      "change": "created"
+    },
+    {
+      "file": "README.md",
+      "change": "modified"
+    },
+    {
+      "file": "REPORT.md",
+      "change": "modified"
+    },
+    {
+      "file": "REQUIREMENTS.md",
+      "change": "created"
+    },
+    {
+      "file": "scripts/verify_submission.py",
+      "change": "created"
+    },
+    {
+      "file": "src/interface_cu/cli.py",
+      "change": "modified"
+    },
+    {
+      "file": "src/interface_cu/discovery.py",
+      "change": "modified"
+    },
+    {
+      "file": "src/interface_cu/replay.py",
+      "change": "modified"
+    },
+    {
+      "file": "src/interface_cu/vision.py",
+      "change": "modified"
+    },
+    {
+      "file": "tests/test_submission.py",
+      "change": "created"
+    }
+  ],
+  "new_evidence_directory": "evidence/phase5",
+  "new_public_evidence_index": "evidence/README.md",
+  "git_publication_safety": {
+    "tracked_staged_files": 0,
+    "ignored_files_inspected_by_name": 14343,
+    "old_review_archives": [
+      {
+        "file": "interface-ai-phase1-review.zip",
+        "entries": 58,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      },
+      {
+        "file": "interface-ai-review-final.zip",
+        "entries": 73,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      },
+      {
+        "file": "interface-ai-review-phase-2.zip",
+        "entries": 119,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      },
+      {
+        "file": "interface-ai-review-phase-3.zip",
+        "entries": 191,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      },
+      {
+        "file": "interface-ai-review-phase-4.zip",
+        "entries": 227,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      },
+      {
+        "file": "interface-ai-review.zip",
+        "entries": 64,
+        "contains_caches": true,
+        "contains_git": false,
+        "contains_context": false,
+        "publication": "excluded"
+      }
+    ],
+    "git_internal_credential_like_config_keys": 0,
+    "private_notes_ignored": true,
+    "public_copy_contains_git_internals": false,
+    "publication_performed": false,
+    "original_context_and_historical_records_preserved": true
+  },
+  "private_walkthrough": {
+    "kept_out_of_public_inventory": true,
+    "location": "ignored private working area"
+  },
+  "remaining_manual_actions": [
+    "Approve final review.",
+    "Create the first commit and push to an owner-selected public GitHub repository after inspecting staged contents.",
+    "Submit the public repository URL according to the assignment instructions; no ZIP."
+  ],
+  "remaining_limits": [
+    "One fictional workflow, DOM-backed targeting and a fixed viewport; no broad cross-application reliability claim.",
+    "Reviewed read-only acknowledgement only; no arbitrary repair/login or process-restart continuation.",
+    "Local ownership does not isolate physical input; detected changes fail closed.",
+    "Fixture-specific sanitization; no general image PII detector.",
+    "Windows/Python 3.13 tested; other platforms and Python versions unverified.",
+    "Credential-preflight CLI errors use generic COMMAND_FAILED; runtime replay errors are specifically classified."
+  ],
+  "publication_performed": false
+}
