@@ -5,8 +5,9 @@ This is a paraphrased audit of every mandatory item in assignment Sections 3 and
 and observed evidence support the claim; **design only** means the assignment
 requires a credible extension design, not a built feature. **Manual gate** means
 publication must still be performed by the owner. No optional stretch feature is
-required or claimed. The only outstanding delivery action is public publication
-and submission after approval; the implemented mandatory vertical slice is present.
+required or claimed. The implemented mandatory vertical slice is present and the
+repository has been published publicly. The remaining delivery action is submission
+of the repository URL according to the assignment instructions.
 
 Evidence keys below link to unchanged actual records, not test doubles:
 
@@ -53,7 +54,7 @@ of a real model or human. Their filenames below refer to the [tests](tests/) tre
 | 3.6 Explicit pause/ownership/resume model | lock, ownership generation, reconciliation predicates | ownership exclusion, wrong-member/view/unresolved/stale/policy/timeout/uncertainty tests | H ownership transitions and verified resumption; C cancellation | Verified; physical input cannot be isolated by the lock; no process-restart continuation. |
 | 3.7 Surface abstraction for legacy web/desktop | public Surface contract, opaque targets, inspected facts | public-adapter test; iframe/limited structural tests | legacy fixture in D/R; REPORT design | Verified web seam; desktop target variants/native executor remain design only. |
 | 3.7 Vendor/tenant reuse, safe specialization and drift handling | app family/version, relative entry routes, checkpoint identity; REPORT extension design | profile mismatch, target ambiguity, identity/checkpoint tests | same unchanged artifact at different local origins; A/R/V | Design only for real tenants: immutable base plus reviewed validated overrides, per-instance origins/contexts, version/digest/checkpoint validation. No automatic re-recording or tenant infrastructure. |
-| 6.1 Source in a public Git repository | source/tests/manifests and publication verifier | Git/public inventory check in V | Local reviewed tree; no remote publication performed | **Manual gate:** owner must approve, commit and push publicly. Current repository has no commits/staged contents. |
+| 6.1 Source in a public Git repository | source/tests/manifests and publication verifier | Git/public inventory check in V | Local reviewed tree; no remote publication performed | Verified; repository is publicly published. Final submission of the repository URL remains a manual action by the owner. |
 | 6.1 Root README setup/run, keys/config and offline execution | [README.md](README.md) | fresh install, browser install, tests, CLI/API-boundary checks | V; preserved paid D | Verified Windows/Python 3.13; other OS/Python versions unverified. |
 | 6.1 Exact discover-then-replay demo path | README optional discovery plus saved-artifact offline path | controller/CLI integration tests | D/A/R; V fresh offline replay | Verified; final validation does not spend credits to repeat D. |
 | 6.2 Root REPORT, approximately 1-3 pages, exactly seven headings | [REPORT.md](REPORT.md) | heading/word-count validation in V | Final design document | Verified by exact heading audit and approximate word count; physical page count depends on rendering. |
