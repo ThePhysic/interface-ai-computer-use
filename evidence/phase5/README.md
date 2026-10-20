@@ -121,5 +121,5 @@ isolation, and limited cross-application reliability evidence. No live Linux/mac
 other Python-version validation is claimed. The CLI's early preflight wrapper uses
 generic COMMAND_FAILED while recording a sanitized exception type; detailed runtime
 replay failures retain their specific contracts. There are no known failing tests or
-missing implemented mandatory capability; public GitHub publication/submission awaits
-owner approval.
+missing implemented mandatory capability; GitHub publication is complete; submission
+of the repository URL remains the final owner action.
