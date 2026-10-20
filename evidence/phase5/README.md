@@ -106,8 +106,10 @@ because it was generated before the final editorial revision. The updated
 `public-manifest.json` reflects the final report. Historical validation records
 have been preserved unchanged for traceability.
 
-Publication is still a manual gate: no commits, staged content, push, repository
-visibility change or email was performed. Private preparation is ignored and absent
+At the time of final validation, publication was still a manual gate: the validation
+tooling did not commit, push, change repository visibility, or send email. Publication
+was subsequently performed manually by the owner. Private preparation remains ignored
+and absent from the public repository. Private preparation is ignored and absent
 from the reviewed copy. Old review ZIPs contain caches and must not be distributed;
 private context/PDF and machine-specific historical metadata remain local. Raw
 execution evidence is preserved; selected public files pass scoped secret/path checks.
